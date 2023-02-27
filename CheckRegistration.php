@@ -97,8 +97,22 @@ $sql_send = "INSERT INTO members (FirstName, LastName, IDNo, Age, Sex, Email, Ph
 
 include('db.php');
 if (mysqli_query($conn, $sql_send)) {
-   $_SESSION["fname"] = $fname;
-    header('Location: ./dashboard.php');
+   $_SESSION["email"] = $email;
+   if($task == "Driver"){
+    header('Location: ./driver/loggedin.php');
+
+echo '
+<script>
+setTimeout(function () {
+    alert("Registration Successful");
+  }, 1000);
+</script>
+';
+   }elseif($task == "Owner"){
+    header('Location: ./owner/loggedin.php');
+   }else{
+    header('Location: ./index.html');
+   }  
     //we can add a back to login instead of going direct to dashboard
 } else {
     echo "<div class='form'>

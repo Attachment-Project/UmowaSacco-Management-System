@@ -38,8 +38,16 @@
 
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <input type="text" placeholder="Role" name="task" required>
 
+
+      <label for="role">
+         <input type="radio" value="Owner" name="task"> Matatu Owner
+        </label>
+        <label for="role">
+         <input type="radio" value="Driver" name="task"> Driver
+        </label>
+
+        <br><br>
 
       <div>
       	<label>Profile Photo</label>
