@@ -1,0 +1,54 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif; 
+}
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	padding: 10px;
+	background: linear-gradient (130deg, red, orange)
+
+}
+.container{
+	max-width: 650px;
+	width: 100%;
+	padding: 28px 33px;
+	background-color: blue;
+	justify-content: space-between;
+	margin: 0 40px;
+	box-shadow: 0 15px 20PX #ABB289;
+	border-radius: 5px
+}
+
+h2{
+	font-size: 89px;
+	font-weight: 600px;
+	text-align: left;
+	color: blue;
+	padding-bottom: 8px;
+	border-bottom: 1px solid silver;
+
+}
+.content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 15px;
+}
+.input-box
+{
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	padding-bottom: 15px;
+}
+
+ .input-box:nth-child(2n) {
+justify-content: end;
+
+ }

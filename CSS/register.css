@@ -1,0 +1,130 @@
+/* Set main page to white and center form */
+body {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  /* Style form container */
+  .container {
+    background-color: #fefefe; /* set background of form to blue */
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    border: #271111 1px solid;
+  }
+  label {
+    display: inline-block;
+    margin-right: 10px;
+}
+  
+  /* Style form elements */
+  .title {
+    color: #271111;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    color: rgb(44, 42, 42);
+  }
+  
+  .input-box {
+    margin-bottom: 20px;
+  }
+  
+  
+  .input-box label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .input-box input,
+  .input-box textarea {
+    background-color: rgb(232, 228, 228);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .input-box input:focus,
+  .input-box textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button[type="submit"] {
+    background-color: #5b1928; /* set button color */
+    border: none;
+    border-radius: 5px;
+    color: #dcdada;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #f75733;
+    color: white;
+  }
+  
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+    
+    .title {
+      font-size: 20px;
+    }
+    
+    .input-box label {
+      font-size: 16px;
+    }
+    
+    .input-box input,
+    .input-box textarea {
+      font-size: 16px;
+    }
+    
+    button[type="submit"] {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Media queries for even smaller screens */
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .title {
+      font-size: 18px;
+    }
+    
+    .input-box label {
+      font-size: 14px;
+    }
+    
+    .input-box input,
+    .input-box textarea {
+      font-size: 14px;
+    }
+    
+    button[type="submit"] {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+  
