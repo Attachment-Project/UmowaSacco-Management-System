@@ -6,7 +6,7 @@
       <!-- register modal start -->
       <div id="id01" class="modal" style="display: block;">
   
-  <form class="modal-content animate" action="CheckRegistration.php" method="post" style="
+  <form class="modal-content animate" action="CheckRegistration.php" enctype="multipart/form-data" method="post" style="
   width: 400px;
 ">
     <div class="imgcontainer">
@@ -38,7 +38,7 @@
 
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <input type="text" placeholder="Role" name="role" required>
+      <input type="text" placeholder="Role" name="task" required>
 
 
       <div>
@@ -47,6 +47,7 @@
        </div>
         
       <button type="submit">Register</button>
+      <p id="errmsg" style="color: red"></p>
     
     </div>
 

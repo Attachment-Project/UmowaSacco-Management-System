@@ -37,7 +37,7 @@ include('db.php');
             include('register.php');
             echo '<script>
     
-            document.getElementById("errmsg").innerHTML = "Uname/Email Exists 2, ";
+            document.getElementById("errmsg").innerHTML = "IdNo or Email exists";
             
         </script>
         
@@ -47,29 +47,41 @@ include('db.php');
          
 }  
        else{ 
-        // username and email not found, so send data to db 
+        // id and email not found, so send data to db 
     //getting data from the registration form
 
     
     session_start();
 
 $fname = $_POST['fname'];
-$uname = $_POST['Uname'];
-$dname = $_POST['Dname'];
-$pname = $_POST['Pname'];
-$kcse = $_POST['KCSE'];
-$status = $_POST['Status'];
-$high_school = $_POST['Hname'];
-$cname = $_POST['Cname'];
-$email = $_POST['Email'];
-$pno = $_POST['pno'];
-$pssw = $_POST['pssw'];
-$cpssw = $_POST['cpssw'];
+$lname = $_POST['lname'];
+$IdNo = $_POST['IdNo'];
+$age = $_POST['age'];
 $gender = $_POST['gender'];
+$email = $_POST['email'];
+$phonenumber = $_POST['pnumber'];
+$psw = $_POST['psw'];
+$task = $_POST['task'];
 
-if( isset($_FILES['pic'])){
-    $pic_name = $_FILES['pic']['name'];
-    $temp_name = $_FILES['pic']['tmp_name'];
+if($task == "Driver"){
+    $salary = 30000;
+}elseif($task == "Owner"){
+    $salary = 80000;
+}else{
+    $salary = 0; 
+}
+
+
+$Date = new DateTime();
+$regDate = $Date->format('Y-m-d');
+
+
+
+
+
+if( isset($_FILES['profilepic'])){
+    $pic_name = $_FILES['profilepic']['name'];
+    $temp_name = $_FILES['profilepic']['tmp_name'];
     
     $img_ex = pathinfo($pic_name, PATHINFO_EXTENSION);
     $img_ex_lc = strtolower($img_ex);
@@ -80,17 +92,18 @@ if( isset($_FILES['pic'])){
 }
 
 // Insert data into database
-$sql_send = "INSERT INTO reg (fname, Uname, Dname, Pname, KCSE, Highschool, theStatus, Cname, Email, pno, pssw, cpssw, gender, pic)
-        VALUES ('$fname', '$uname', '$dname', '$pname', '$kcse', '$high_school', '$status', '$cname', '$email', '$pno', '$pssw', '$cpssw', '$gender', '$new_img_name')";
+$sql_send = "INSERT INTO members (FirstName, LastName, IDNo, Age, Sex, Email, PhoneNumber, psw, task, Salary, RegistrationDate, ProfilePicture)
+        VALUES ('$fname', '$lname', '$IdNo', '$age', '$gender', '$email', '$phonenumber', '$psw', '$task', '$salary', '$regDate','$new_img_name')";
 
+include('db.php');
 if (mysqli_query($conn, $sql_send)) {
-   $_SESSION["uname"] = $uname;
+   $_SESSION["fname"] = $fname;
     header('Location: ./dashboard.php');
     //we can add a back to login instead of going direct to dashboard
 } else {
     echo "<div class='form'>
     <h3>Required fields are missing.</h3><br/>
-    <p class='link'>Click here to <a href='register.html'>registration</a> again.</p>
+    <p class='link'>Click here to <a href='register.php'>registration</a> again.</p>
     </div>";
 }
 
