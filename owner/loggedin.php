@@ -41,7 +41,7 @@ require_once('../userData/members.php');
             </label>
             <ul class="menu" style="border-radius: 5px;">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#services">Add Matatu</a></li>
+                <li><a href="./addMatatu.php">Add Matatu</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="../index.html" class="active">Log Out</a></li>
             </ul>
