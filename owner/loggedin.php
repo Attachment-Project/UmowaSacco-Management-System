@@ -1,7 +1,9 @@
 
 <?php
 require_once('../userData/members.php');
+//include('fetchMatatu.php');
 ?>
+
 <!-- welcome to umowa sacco -->
 <!doctype html>
 <html>
@@ -40,8 +42,9 @@ require_once('../userData/members.php');
                 <span class="nav-icon"></span>
             </label>
             <ul class="menu" style="border-radius: 5px;">
-                <li><a href="#services">Services</a></li>
+                <li><a href="./fetchMatatu.php">Services</a></li>
                 <li><a href="./addMatatu.php">Add Matatu</a></li>
+                <li><a href="./fetchMatatu.php">Your Matatus</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="../index.html" class="active">Log Out</a></li>
             </ul>
@@ -53,7 +56,6 @@ require_once('../userData/members.php');
             
             <!--text-->
             <div class="home-text" >
-                
                 <h1 style="color: white; letter-spacing: 3px;">Hi, <?php echo $fname ?></h1>
                 <p style="color: white;">Your ultimate partner for safe and convenient travel. Discover our exceptional 
                 services and let's take you on a journey that exceeds your expectations</p>

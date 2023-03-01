@@ -12,7 +12,7 @@ include('../db.php');
          
        
      
-       $sql = "SELECT * FROM Matatu WHERE NumPlate = '$NumPlate'";
+       $sql = "SELECT * FROM Matatus WHERE NumPlate = '$NumPlate'";
 
       
 
@@ -34,7 +34,7 @@ include('../db.php');
             include('./addMatatu.php');
             echo '<script>
     
-            document.getElementById("errmsg").innerHTML = "Matatu exists";
+            document.getElementById("errmsg").innerHTML = "Matatus exists";
             
         </script>
         
@@ -77,7 +77,7 @@ if( isset($_FILES['InsurancePic'])){
 }
 
 // Insert data into database
-$sql_send = "INSERT INTO Matatu (OwnerId, NumPlate, RouteFrom, RouteTo, DriverId, MatatuCapacity, RegistrationDate, ProfilePicture)
+$sql_send = "INSERT INTO Matatus (OwnerId, NumPlate, RouteFrom, RouteTo, DriverId, MatatuCapacity, RegistrationDate, InsurancePicture)
         VALUES ('$OwnerId', '$NumPlate', '$RouteFrom', '$RouteTo', '$DriverId', '$MatatuCapacity','$regDate','$new_img_name')";
 
 include('../db.php');

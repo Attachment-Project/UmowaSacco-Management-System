@@ -15,7 +15,7 @@ include('db.php');
          
        
      
-       $sql = "SELECT * FROM members WHERE Email = '$email' OR IDNo = '$IdNo'";
+       $sql = "SELECT * FROM member WHERE Email = '$email' OR IDNo = '$IdNo'";
 
       
 
@@ -92,7 +92,7 @@ if( isset($_FILES['profilepic'])){
 }
 
 // Insert data into database
-$sql_send = "INSERT INTO members (FirstName, LastName, IDNo, Age, Sex, Email, PhoneNumber, psw, task, Salary, RegistrationDate, ProfilePicture)
+$sql_send = "INSERT INTO member (FirstName, LastName, IDNo, Age, Sex, Email, PhoneNumber, psw, task, Salary, RegistrationDate, ProfilePicture)
         VALUES ('$fname', '$lname', '$IdNo', '$age', '$gender', '$email', '$phonenumber', '$psw', '$task', '$salary', '$regDate','$new_img_name')";
 
 include('db.php');
