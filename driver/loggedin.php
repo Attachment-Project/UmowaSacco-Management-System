@@ -90,19 +90,19 @@ require_once('../userData/members.php');
         <div class="box-container" id="box-container">
           <!--box-1-------->
           <div class="box">
-              <img src="../images/loan.jpg">
-              <font>Loan Application</font>
-              <p>We give our members loans according to their savings</p>
+              <img src="../images/logo.png">
+              <font>Daily Report</font>
+              <p>Daily Report (Fare Collection, performance, daily operations and maintenance)</p>
               <!--btn--------->
-              <a href="">Apply Now!</a>
+              <a href="./dailyReport.php">Add Now!</a>
           </div>
           <!--box-2-------->
           <div class="box">
-              <img src="../images/savings.png">
-              <font>Savings</font>
-              <p>We allow members to save money with interest of 5% P.M</p>
+              <img src="../images/logo.png">
+              <font>Schedules</font>
+              <p>Lorem ipsum dolor sit amet.</p>
               <!--btn--------->
-              <a href="">Save Now!</a>
+              <a href="./schedules.php">View Schedules!</a>
           </div>
          
           

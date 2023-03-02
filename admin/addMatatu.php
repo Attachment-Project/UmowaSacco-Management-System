@@ -44,7 +44,7 @@
       </div>
 
 
-      <select id="driverId" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" name="DriverId" required>
+      <select id="driverId" style="width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;" name="driverId" required>
         <option value="">Select a Driver</option>
         <?php foreach ($drivers as $driver): ?>
           <option value="<?php echo $driver['IDNo']; ?>"><?php echo $driver['IDNo']; ?></option>

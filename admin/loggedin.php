@@ -43,6 +43,7 @@ require_once('../userData/members.php');
             </label>
             <ul class="menu" style="border-radius: 5px;">
                 <li><a href="./addMatatu.php">Add Matatu</a></li>
+                <li><a href="#services">Schedule</a></li>
                 <li><a href="./fetchMatatu.php">All Matatus</a></li>
                 <li><a href="./index.php" class="active">Log Out</a></li>
             </ul>
@@ -81,7 +82,7 @@ require_once('../userData/members.php');
     <section class="services" id="services"  id="services-heading">
         <!--heading----------->
         <div class="services-heading">
-            <h2>OUR SERVICES</h2>
+            <h2>SHEDULES AND REPORTS</h2>
 
        
         </div>
@@ -91,19 +92,19 @@ require_once('../userData/members.php');
         <div class="box-container" id="box-container">
           <!--box-1-------->
           <div class="box">
-              <img src="../images/loan.jpg">
-              <font>Matatu Operations</font>
-              <p>We give our members loans according to their savings</p>
+              <img src="../images/logo.png">
+              <font>Reports</font>
+              <p>Matatu Reports</p>
               <!--btn--------->
-              <a href="">View Matatu Operations</a>
+              <a href="./MatatuReport.php">View</a>
           </div>
           <!--box-2-------->
           <div class="box">
-              <img src="../images/savings.png">
-              <font>Savings</font>
-              <p>We allow members to save money with interest of 5% P.M</p>
+              <img src="../images/logo.png">
+              <font>Schedule</font>
+              <p>Matatu daily Schedule</p>
               <!--btn--------->
-              <a href="">Save Now!</a>
+              <a href="./schedule.php">Add</a>
           </div>
          
           
