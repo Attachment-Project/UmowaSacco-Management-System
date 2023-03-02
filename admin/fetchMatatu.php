@@ -30,7 +30,7 @@
     </head>
     <body>
 
-    <button><a style="text-decoration: none;" href="./index.php">Back</a></button>
+    <button><a style="text-decoration: none;" href="./loggedin.php">Back</a></button>
         <?php
         include("../db.php");
         include('../userData/members.php');
