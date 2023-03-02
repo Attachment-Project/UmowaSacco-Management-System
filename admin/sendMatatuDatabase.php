@@ -84,7 +84,7 @@ include('../db.php');
 if (mysqli_query($conn, $sql_send)) {
    $_SESSION["OwnerId"] = $OwnerId;
 
- header('Location: ./loggedin.php');
+ header('Location: ./index.php');
 
 echo '
 <script>

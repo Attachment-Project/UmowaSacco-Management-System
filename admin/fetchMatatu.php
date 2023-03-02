@@ -30,14 +30,14 @@
     </head>
     <body>
 
-    <button><a style="text-decoration: none;" href="./loggedin.php">Back</a></button>
+    <button><a style="text-decoration: none;" href="./index.php">Back</a></button>
         <?php
         include("../db.php");
         include('../userData/members.php');
 
         $IDNo = $_SESSION['IdNo'];
 
-        $sql = "SELECT FleetNo, OwnerId, NumPlate, RouteFrom, RouteTo, DriverId, MatatuCapacity, RegistrationDate FROM Matatus WHERE OwnerId = '$IDNo'";
+        $sql = "SELECT FleetNo, OwnerId, NumPlate, RouteFrom, RouteTo, DriverId, MatatuCapacity, RegistrationDate FROM Matatus";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -52,11 +52,11 @@
                 echo '<p> RegistrationDate: ' .$row['RegistrationDate']. '</p>';
                 echo '<p>Number of Seats: ' . $row['MatatuCapacity'] . '</p>';
 
-                
-                //echo '<button onclick="window.location.href=\'update_matatu.php?id=' . $row['FleetNo'] . '\'">Update</button>';
-               // echo ' &nbsp;';
-               // echo '<button onclick="if(confirm(\'Are you sure you want to delete this matatu?\')) window.location.href=\'delete_matatu.php?id=' . $row['FleetNo'] . '\'">Delete</button>';
-               // echo '</div>';
+                echo '<div class="update">';
+                echo '<button onclick="window.location.href=\'update_matatu.php?id=' . $row['FleetNo'] . '\'">Update</button>';
+                echo ' &nbsp;';
+                echo '<button onclick="if(confirm(\'Are you sure you want to delete this matatu?\')) window.location.href=\'delete_matatu.php?id=' . $row['FleetNo'] . '\'">Delete</button>';
+                echo '</div>';
                 echo '</div>';
             }
             echo '</div>';

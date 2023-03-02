@@ -42,9 +42,8 @@ require_once('../userData/members.php');
                 <span class="nav-icon"></span>
             </label>
             <ul class="menu" style="border-radius: 5px;">
-                <li><a href="./fetchMatatu.php">Services</a></li>
-                <li><a href="./fetchMatatu.php">Your Matatus</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="./addMatatu.php">Add Matatu</a></li>
+                <li><a href="./fetchMatatu.php">All Matatus</a></li>
                 <li><a href="../index.html" class="active">Log Out</a></li>
             </ul>
         </nav>
