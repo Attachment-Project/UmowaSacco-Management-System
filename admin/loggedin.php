@@ -56,8 +56,7 @@ require_once('../userData/members.php');
             <!--text-->
             <div class="home-text" >
                 <h1 style="color: white; letter-spacing: 3px;">ADMIN PORTAL</h1>
-                <p style="color: white;">Your ultimate partner for safe and convenient travel. Discover our exceptional 
-                services and let's take you on a journey that exceeds your expectations</p>
+        
             <!--login-btn-->
             <!-- <a href="#" class="main-login" style="border-radius: 10px;">BECOME A MEMBER</a> -->
             </div>

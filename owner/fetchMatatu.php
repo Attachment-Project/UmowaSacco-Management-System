@@ -45,6 +45,7 @@
             while($row = $result->fetch_assoc()) {
                 echo '<div class="matatu">';
                 echo '<h3>Matatu Number: ' . $row['FleetNo']. '</h3>';
+                echo '<h4>Number plate: ' . $row['NumPlate']. '</h4>';
                 echo '<p> OwnerId: ' . $row['OwnerId'] . '</p>';
                 echo 'Route';
                 echo '<p> From: ' .$row['RouteFrom'] . '</p>';

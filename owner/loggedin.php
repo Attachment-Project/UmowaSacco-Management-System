@@ -82,7 +82,7 @@ require_once('../userData/members.php');
     <section class="services" id="services"  id="services-heading">
         <!--heading----------->
         <div class="services-heading">
-            <h2>OUR SERVICES</h2>
+            <h2> SERVICES</h2>
 
        
         </div>
@@ -92,19 +92,19 @@ require_once('../userData/members.php');
         <div class="box-container" id="box-container">
           <!--box-1-------->
           <div class="box">
-              <img src="../images/loan.jpg">
+              <img src="../images/logo.png">
               <font>Matatu Operations</font>
-              <p>We give our members loans according to their savings</p>
+              <p>Can view your matatu daily Operations</p>
               <!--btn--------->
-              <a href="">View Matatu Operations</a>
+              <a href="./matatuReport.php">View</a>
           </div>
           <!--box-2-------->
           <div class="box">
-              <img src="../images/savings.png">
-              <font>Savings</font>
-              <p>We allow members to save money with interest of 5% P.M</p>
+              <img src="../images/logo.png">
+              <font>Daily Schedule</font>
+              <p>Can view your matatu daily schedule</p>
               <!--btn--------->
-              <a href="">Save Now!</a>
+              <a href="">View</a>
           </div>
          
           

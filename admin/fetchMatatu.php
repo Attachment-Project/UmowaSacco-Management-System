@@ -43,8 +43,9 @@
         if ($result->num_rows > 0) {
             echo '<div class="matatus-container">';
             while($row = $result->fetch_assoc()) {
-                echo '<div class="matatu">';
-                echo '<h3>Matatu Number: ' . $row['FleetNo']. '</h3>';
+               echo '<div class="matatu">';
+                echo '<h3>Fleet Number: ' . $row['FleetNo']. '</h3>';
+                echo '<h3>Number Plate: ' . $row['NumPlate']. '</h3>';
                 echo '<p> OwnerId: ' . $row['OwnerId'] . '</p>';
                 echo 'Route';
                 echo '<p> From: ' .$row['RouteFrom'] . '</p>';
