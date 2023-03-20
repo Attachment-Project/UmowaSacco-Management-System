@@ -102,8 +102,12 @@ require_once('../userData/members.php');
               <img src="../images/logo.png">
               <font>Schedule</font>
               <p>Matatu daily Schedule</p>
-              <!--btn--------->
-              <a href="./schedule.php">Add</a>
+              <font>Routes</font>
+              <a href="./add_Nrb_Mks.php">Nairobi - Machakos</a>
+              <a href="./add_Mks_Nai.php">Machakos - Nairobi</a>
+              <a href="./add_Nai_Wote.php">Nairobi - Wote</a>
+              <a href="./add_Wote_Nai.php">Wote - Nairobi</a>
+            
           </div>
          
           

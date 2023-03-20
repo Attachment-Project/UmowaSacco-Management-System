@@ -31,7 +31,6 @@ if (mysqli_num_rows($result) > 0) {
     // loop through the reports and display them in divs
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<div class='report'>";
-        echo "<p>Report ID: " . $row["ReportID"] . "</p>";
         echo "<p>Driver's First Name: " . $row["DriverFirstName"] . "</p>";
         echo "<p>Driver ID: " . $row["DriverId"] . "</p>";
         echo "<p>Fleet Number: " . $row["FleetNo"] . "</p>";

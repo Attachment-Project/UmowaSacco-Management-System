@@ -1,3 +1,4 @@
+
 <head>
       <link rel="stylesheet" href="../css/style.css"/>
 <link rel="stylesheet" href="../css/fullstyle.css">
@@ -5,15 +6,19 @@
       
       <!-- daily report modal start -->
       <div id="id01" class="modal" style="display: block;">
-  
+      <button>
+    <a href="./loggedin.php">back</a>
+</button>
+
       <form class="modal-content animate" action="checkDailyReport.php" enctype="multipart/form-data" method="post" style="width: 400px;">
     <div class="imgcontainer">
-        <p style="font-size: 22px;">Daily Matatu Report </p>
+
+        <p style="font-size: 22px;">Daily Schedules </p>
         <hr>
     </div>
 <div class="container">
 
-    <input type="text" placeholder="Driver's First Name" name="fname" required>
+    <input type="text" placeholder="" name="fname" required>
 
     <input type="number" placeholder="Driver Id" name="driverId" required>
 

@@ -1,6 +1,6 @@
 <?php
-include("../auth_session.php");
-include("../db.php");
+require("auth_session.php");
+include("db.php");
 $email = $_SESSION['email'];
 
 $userdata_query = "SELECT FirstName, LastName, IDNo, Age, Sex, Email, PhoneNumber, psw, task, Salary, RegistrationDate,ProfilePicture FROM member WHERE Email = '$email'";

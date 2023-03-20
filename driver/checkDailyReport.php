@@ -13,22 +13,28 @@ $maintenanceCosts = $_POST["MaintenanceCosts"];
 $fuelConsumption = $_POST["FuelConsumption"];
 $incidents = $_POST["Incidents"];
 
+
 $Date = new DateTime();
 $DateReported = $Date->format('Y-m-d');
 
-// create a SQL query to insert the data into the DailyReport table
-$sql = "INSERT INTO DailyReport (DriverFirstName, DriverId, FleetNo, NoOfTrips, PassengerCount, TotalRevenue, MaintenanceCosts, FuelConsumption, Incidents,DateReported) 
-        VALUES ('$driverFirstName', $driverId, $fleetNo, $noOfTrips, $passengerCount, $totalRevenue, $maintenanceCosts, $fuelConsumption, $incidents,'$DateReported')";
+// prepare a SQL query to insert the data into the DailyReport table
+$stmt = $conn->prepare("INSERT INTO DailyReport (DriverFirstName, DriverId, FleetNo, NoOfTrips, PassengerCount, TotalRevenue, MaintenanceCosts, FuelConsumption, Incidents, DateReported) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-// execute the SQL query
-if(mysqli_query($conn, $sql)){
+// bind the form input values to the prepared statement
+$stmt->bind_param("ssiiiiiiis", $driverFirstName, $driverId, $fleetNo, $noOfTrips, $passengerCount, $totalRevenue, $maintenanceCosts, $fuelConsumption, trim($incidents), $DateReported);
+
+// execute the prepared statement
+if($stmt->execute()) {
     // display success message
     echo "<script>alert('Report submitted successfully!'); window.location = 'loggedin.php';</script>";
 } else {
     // display error message
-    echo "<script>alert('Error: " . mysqli_error($conn) . "');</script>";
+    echo "<p>Error: " . $conn-> $error . "</p>";
 }
 
-// close the database connection
-mysqli_close($conn);
+// close the prepared statement and database connection
+$stmt->close();
+$conn->close();
+
+
 ?>

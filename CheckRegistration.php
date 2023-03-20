@@ -63,6 +63,7 @@ $phonenumber = $_POST['pnumber'];
 $psw = $_POST['psw'];
 $task = $_POST['task'];
 
+
 if($task == "Driver"){
     $salary = 30000;
 }elseif($task == "Owner"){
