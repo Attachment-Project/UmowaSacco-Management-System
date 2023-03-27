@@ -18,10 +18,10 @@ if ($result) {
 }
 $_SESSION['IdNo'] = $IDNo;
 
-$matatudata_query = "SELECT FleetNo, OwnerId, NumPlate, RouteFrom, RouteTo, DriverId, MatatuCapacity, RegistrationDate FROM Matatus WHERE OwnerId = ' $IDNo'";
-$matatudata_result = mysqli_query($conn, $matatudata_query);
+// $matatudata_query = "SELECT FleetNo, OwnerId, NumPlate, RouteFrom, RouteTo, DriverId, MatatuCapacity, RegistrationDate FROM Matatus WHERE OwnerId = ' $IDNo'";
+// $matatudata_result = mysqli_query($conn, $matatudata_query);
 
-// if($matatudata_result){
+//  if($matatudata_result){
 //   $row = mysqli_fetch_assoc($matatudata_result);
 //   $FleetNo= $row['FleetNo'];
 //   $OwnerId= $row['OwnerId'];

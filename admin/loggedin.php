@@ -103,11 +103,12 @@ require_once('../userData/members.php');
               <font>Schedule</font>
               <p>Matatu daily Schedule</p>
               <font>Routes</font>
-              <a href="./add_Nrb_Mks.php">Nairobi - Machakos</a>
-              <a href="./add_Mks_Nai.php">Machakos - Nairobi</a>
+              <a href="./add_Nrb_Mks.php">Nairobi - Machakos</a> 
+              <a href="./viewSchedule_Nai_Macha.php">View</a>
               <a href="./add_Nai_Wote.php">Nairobi - Wote</a>
-              <a href="./add_Wote_Nai.php">Wote - Nairobi</a>
-            
+              <a href="./viewSchedule_Nai_Wote.php">View</a>
+              
+
           </div>
          
           

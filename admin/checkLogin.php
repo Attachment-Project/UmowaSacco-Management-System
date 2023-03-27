@@ -23,7 +23,7 @@ if ($count == 1) {
     echo "<script>alert('Login Success'); window.location.href='./loggedin.php';</script>";
         
 } else {
-    include('./login.php');
+    include('./index.php');
     echo '<script>
     document.getElementById("errmsg").innerHTML = "Incorrect Uname or password"; 
 </script>
