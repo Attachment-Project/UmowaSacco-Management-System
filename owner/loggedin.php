@@ -104,7 +104,7 @@ require_once('../userData/members.php');
               <font>Daily Schedule</font>
               <p>Can view your matatu daily schedule</p>
               <!--btn--------->
-              <a href="">View</a>
+              <a href="./schedules.php">View</a>
           </div>
          
           

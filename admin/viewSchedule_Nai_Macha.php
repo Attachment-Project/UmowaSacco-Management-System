@@ -26,6 +26,13 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td>" . $row['arrival1_t2'] . "</td>";
         echo "<td>" . $row['dep2_t2'] . "</td>";
         echo "<td>" . $row['arrival2_t2'] . "</td>";
+        echo "<td>";
+        echo "<a href='updateSchedule.php?id=" . $row['schedule_id'] . "'>Update</a>";
+        echo "</td>";
+        echo "<td>";
+        echo "<td><a href='deleteSchedule_Nai_Macha.php?id=" . $row['schedule_id'] . "' onclick='return confirm(\"Are you sure you want to delete this schedule?\")'>Delete</a></td>";
+
+        echo "</td>";
         echo "</tr>";
     }
     echo "</table>";
