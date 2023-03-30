@@ -32,7 +32,6 @@
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" class="cancelbtn"><a style="color: white" href="./index.html">Cancel</a></button>
       <span class="psw"><a href="./register.php">Register Here</a></span>
-      <span class="psw" style="margin-right: 11px;"><a href="#">Forgot  password?</a></span>
     </div>
   </form>
 </div>

@@ -29,6 +29,82 @@ require_once('../userData/members.php');
       document.getElementById("loading-page").style.display = "none";
     }, 1000); // 1 seconds
   </script>
+
+<!-- Display the profile fields in HTML -->
+<div class="drawer">
+  <h2>Profile</h2>
+  <img style=" border-radius: 50%; border: blue 2px solid;" height="250px" width="250px" src="../images/profileImg/<?php echo $picture; ?>" alt="Profile Picture">
+  <p><b> Name:</b> <?php echo $fname; ?></p>
+  <p><b>Last Name:</b> <?php echo $Lname; ?></p>
+  <p> <b>Phone Number:</b> <?php echo $PhoneNumber; ?></p>
+  <p><b>Email:</b> <?php echo $email; ?></p>
+  <p><b>ID Number:</b> <?php echo $IDNo; ?></p>
+  <p><b>Age:</b> <?php echo $Age; ?></p>
+ 
+</div>
+
+
+
+
+<script>
+function toggleDrawer() {
+  var drawer = document.querySelector(".drawer");
+  drawer.classList.toggle("visible");
+}
+</script>
+
+<style>
+
+h1, h2 {
+      color: Blue;
+    }
+.drawer>p{
+    color: blue;
+}
+    .drawer {
+      position: fixed;
+      align-items: center;
+      
+      padding: 20px;
+      top: 0;
+      text-align: center;
+      right: 0;
+      width: 20%;
+      place-items: center;
+      height: auto;
+      background-color: white;
+      display: none;
+      z-index: 1000;
+      overflow-y: auto;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .drawer.visible {
+      display: block;
+    }
+
+    .drawer-content {
+      position: relative;
+      margin: 50px auto;
+      max-width: 600px;
+      align-items: center;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .drawer-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5em;
+      color: #fff;
+      cursor: pointer;
+    }
+</style>
+
+
 <body id="main-body">
     
     <section class="main" style="background-image: url(../images/hero-bg.png);">
@@ -44,7 +120,7 @@ require_once('../userData/members.php');
             <ul class="menu" style="border-radius: 5px;">
                 <li><a href="./fetchMatatu.php">Services</a></li>
                 <li><a href="./fetchMatatu.php">Your Matatus</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="#" onclick="toggleDrawer()"><img style=" border-radius: 50%; border: blue 2px solid;" height="50px" width="50px" src="../images/profileImg/<?php echo $picture; ?>" alt="Profile Picture"></a></li>
                 <li><a href="../index.html" class="active">Log Out</a></li>
             </ul>
         </nav>
@@ -115,8 +191,23 @@ require_once('../userData/members.php');
 
     </section>
     
+    <style>
+        .footer>a>img{
+border-radius: 50;
+height: 40px;
+width: 50px;
+
+        }
+    </style>
+    
     <!--footer------------->
-    <footer>
+    <footer class="footer">
+        <br>
+        <a target="_blank" href="https://wa.me/254743411856"><img style ="height: 50px;
+            width: 50px;" src="../images/whatsapp.png"></a>&nbsp;
+        <a target="_blank" href="https://www.facebook.com/emmanuel.mutua.9889"><img src="../images/fb.png"></a>&nbsp;
+        <a target="_blank" href="https://twitter.com/EMM_Techprenuer"><img src="../images/twitter.png"></a>&nbsp;
+        <a target="_blank" href="tel:254743411856"><img src="../images/callled.png"></a>&nbsp;
         <p>Copyright (C) - 2023 | Developed By <a href="">Umowa Sacco</a> </p>
     </footer>
     <script>

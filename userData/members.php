@@ -10,6 +10,7 @@ if ($result) {
   $row = mysqli_fetch_assoc($result);
   $fname = $row['FirstName'];
   $Lname = $row['LastName'];
+  $email = $row['Email'];
   $PhoneNumber = $row['PhoneNumber'];
   $IDNo = $row['IDNo'];
   $task = $row['task'];

@@ -88,7 +88,7 @@ if( isset($_FILES['profilepic'])){
     $img_ex_lc = strtolower($img_ex);
     
     $new_img_name = uniqid("IMG-",true).'.'.$img_ex_lc;
-    $img_upload_path = '../images/profileImg/'.$new_img_name;
+    $img_upload_path = './images/profileImg/'.$new_img_name;
     move_uploaded_file($temp_name, $img_upload_path);
 }
 
