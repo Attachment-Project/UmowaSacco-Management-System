@@ -29,7 +29,7 @@
 
     <input type="number" placeholder="Fuel Consumption(Cost)" name="FuelConsumption" required>
 
-    <input type="text" placeholder="Any Incidents Occurred" name="Incidents" pattern="[A-Za-z ]+" title="Please enter letters and spaces only">
+    <input type="text" placeholder="Any Incidents Occurred" name="Incidents">
 
     <button type="submit">Submit</button>
     <p id="errmsg" style="color: red"></p>

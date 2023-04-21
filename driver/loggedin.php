@@ -33,7 +33,7 @@ require_once('../userData/members.php');
 <!-- Display the profile fields in HTML -->
 <div class="drawer">
   <h2>Profile</h2>
-  <img style=" border-radius: 50%; border: blue 2px solid;" height="250px" width="250px" src="../images/profileImg/<?php echo $picture; ?>" alt="Profile Picture">
+  <!-- <img style=" border-radius: 50%; border: blue 2px solid;" height="250px" width="250px" src="../images/profileImg/" alt="Profile Picture"> -->
   <p><b> Name:</b> <?php echo $fname; ?></p>
   <p><b>Last Name:</b> <?php echo $Lname; ?></p>
   <p> <b>Phone Number:</b> <?php echo $PhoneNumber; ?></p>
@@ -120,7 +120,7 @@ h1, h2 {
             </label>
             <ul class="menu" style="border-radius: 5px;">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#" onclick="toggleDrawer()"><img style=" border-radius: 50%; border: blue 2px solid;" height="50px" width="50px" src="../images/profileImg/<?php echo $picture; ?>" alt="Profile Picture"></a></li>
+                <li><a href="#" onclick="toggleDrawer()">Profile</a></li>
                 <li><a href="../index.html" class="active">Log Out</a></li>
             </ul>
         </nav>

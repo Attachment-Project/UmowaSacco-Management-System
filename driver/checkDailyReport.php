@@ -21,7 +21,7 @@ $DateReported = $Date->format('Y-m-d');
 $stmt = $conn->prepare("INSERT INTO DailyReport (DriverFirstName, DriverId, FleetNo, NoOfTrips, PassengerCount, TotalRevenue, MaintenanceCosts, FuelConsumption, Incidents, DateReported) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
 // bind the form input values to the prepared statement
-$stmt->bind_param("ssiiiiiiis", $driverFirstName, $driverId, $fleetNo, $noOfTrips, $passengerCount, $totalRevenue, $maintenanceCosts, $fuelConsumption, trim($incidents), $DateReported);
+$stmt->bind_param("ssiiiiiiis", $driverFirstName, $driverId, $fleetNo, $noOfTrips, $passengerCount, $totalRevenue, $maintenanceCosts, $fuelConsumption, $incidents, $DateReported);
 
 // execute the prepared statement
 if($stmt->execute()) {
